@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="test.js"></script>
+    <style>
+        body{
+            margin: 20px 0px 0px 20px;
+            padding: 0px 0px 0px 0px;
+
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section{
+            display: inline-block;
+
+        }
+        .container{
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 71px 88px 152px 117px 216px 10px;
+            
+        }
+        .selet{
+            padding: 10px 10px 24px 18px;
+            width: 760px;
+            height: 108px;
+        }
+        .grid_div_1 > div{
+          
+           padding: 0px 0px 0px 0px;
+           margin: 0px 0px 2px 0px;
+          
+        }
+        .grid_div_1 {
+            font-size: 11px;
+        height: 88px;
+        grid-template-rows: 14px 14px 14px 14px;
+        margin: 0px 5px 0px 0px;
+        padding: 0px 10px 0px 0px;
+         }
+         .play_rank {
+            font-size: 12px;
+            font-weight: 900;
+          
+        }
+
+         .play_win {
+            color: red;
+            font-weight: 900;
+          
+        }
+        .grid_div_2{
+            display: grid;
+          
+        }
+        .fix_div{
+            display: grid;
+            grid-template-columns: 20px 20px;
+            grid-template-rows: 20px 20px;
+        }
+        .grid_div_3_items > div{
+            display: inline-block;
+        }
+
+        .img_20px {
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+        }
+
+        .img_42px {
+            width: 42px;
+            height: 42px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <input type = "text" id="sm">
+    <input type = "button" value="검색" onclick = "summoner()">
+    <h2 id="t-n">Name</h2>
+    <h2 id="t-pi">puuid</h2>
+    <img id="pfimg"src="https://ddragon.leagueoflegends.com/cdn/12.20.1/img/profileicon/0.png" alt=""></img>
+    <h2 id="t-l">Level</h2>
+    <hr>
+    <h2>전적</h2>
+    <section>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+        <div class="container selet">
+            <div class="grid_div_1">
+                <div class="play_rank">게임형식</div>
+                <div class="play_day">날짜</div>
+                <br />
+                <div class="play_win">승패</div>
+                <div class="play_time">게임시간</div>
+                             
+            </div>
+            <div class="grid_div_2">
+                <div>
+                    <img src="" class="img_42px ci">
+                </div>    
+                <div class="fix_div">
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 D -->
+                    <div>
+                        <img src="" alt="" class="img_20px cs">
+                    </div> <!-- 스펠 F -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">  
+                    </div> <!-- 주 룬 -->
+                    <div>
+                        <img src="" alt="" class="img_20px ps">
+                    </div> <!-- 보조 룬 -->
+                </div>
+
+            </div>
+            <div class="grid_div_3"><div class="kda">K/D/A</div>
+                <br />
+                <br />
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px wd"> 
+                </div>
+                <div class="grid_div_3_items">
+                    <img src="" alt="" class="img_20px it">
+                    <img src="" alt="" class="img_20px it"> 
+                    <img src="" alt="" class="img_20px it">
+                </div>
+            </div>
+            <div class="grid_div_4">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+
+            <div class="grid_div_5">
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+                <br/>
+                <img src="" class="img_20px cl"><a class="sn">Null</a>
+            </div>
+            <div class="grid_div_6"></div>
+        </div>
+    </section>
+</body>
+</html>
